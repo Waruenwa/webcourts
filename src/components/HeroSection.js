@@ -110,8 +110,6 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.6 }}
           >
             บริษัท คอร์ทส์ เม็กก้าสโตร์ (ประเทศไทย) จำกัด
-            <br />
-            ประกอบธุรกิจให้สินเชื่อตามประมวลกฎหมายแพ่งและพาณิชย์
           </MotionText>
 
           {/* CTA Buttons */}

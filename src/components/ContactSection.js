@@ -35,7 +35,8 @@ const contactInfo = [
     title: 'โทรศัพท์',
     detail: '02 857 5188',
     subDetail: 'จันทร์-ศุกร์ 9:00-18:00',
-    color: 'accent.500',
+    color: '#F5922A',
+    iconBg: '#FFF3E0',
   },
   {
     icon: FaLine,
@@ -43,26 +44,35 @@ const contactInfo = [
     detail: '@rlpn',
     subDetail: 'ตอบกลับภายใน 5 นาที',
     color: '#06C755',
+    iconBg: '#E7FAEF',
   },
-  {
-    icon: FaEnvelope,
-    title: 'อีเมล',
-    detail: 'info@courts.co.th',
-    subDetail: 'ตอบกลับภายใน 24 ชั่วโมง',
-    color: '#7C5CFC',
-  },
+  // {
+  //   icon: FaEnvelope,
+  //   title: 'อีเมล',
+  //   detail: 'contact@courts.co.th',
+  //   subDetail: 'ตอบกลับภายใน 24 ชั่วโมง',
+  //   color: '#7C5CFC',
+  //   iconBg: '#F1EEFF',
+  // },
   {
     icon: FaMapMarkerAlt,
     title: 'สำนักงานใหญ่',
-    detail: 'คอร์ทส์ เม็กก้าสโตร์ (ประเทศไทย)',
+    detail: 'บริษัท คอร์ทส์ เม็กก้าสโตร์ (ประเทศไทย) จำกัด',
     subDetail: '34/6 ม.1 ถ.แจ้งวัฒนะ อ.ปากเกร็ด จ.นนทบุรี 11120',
     color: '#FF6B6B',
+    iconBg: '#FFF0F1',
   },
 ];
 
 export default function ContactSection() {
   return (
-    <Box id="contact" as="section" py={{ base: 16, md: 24 }} bg="white" position="relative">
+    <Box
+      id="contact"
+      as="section"
+      py={{ base: 16, md: 24 }}
+      bg="white"
+      position="relative"
+    >
       <Container maxW="1200px">
         {/* Section Header */}
         <VStack spacing={4} textAlign="center" mb={16}>
@@ -103,7 +113,11 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Text color="gray.500" fontSize={{ base: 'md', md: 'lg' }} maxW="550px">
+            <Text
+              color="gray.500"
+              fontSize={{ base: 'md', md: 'lg' }}
+              maxW="550px"
+            >
               พร้อมรับฟังและช่วยเหลือคุณ ปรึกษาปัญหาหนี้ฟรี ไม่มีค่าใช้จ่าย
             </Text>
           </MotionBox>
@@ -140,9 +154,10 @@ export default function ContactSection() {
                       w="45px"
                       h="45px"
                       borderRadius="xl"
-                      bg={`${info.color}15`}
+                      bg={info.iconBg}
                       align="center"
                       justify="center"
+                      boxShadow={`0 10px 24px ${info.color}20`}
                     >
                       <Icon as={info.icon} w={5} h={5} color={info.color} />
                     </Flex>
@@ -189,7 +204,13 @@ export default function ContactSection() {
               />
 
               <VStack spacing={5} position="relative" zIndex={2}>
-                <Heading as="h3" fontSize="xl" fontWeight="700" color="white" w="100%">
+                <Heading
+                  as="h3"
+                  fontSize="xl"
+                  fontWeight="700"
+                  color="white"
+                  w="100%"
+                >
                   ส่งข้อความถึงเรา
                 </Heading>
 
@@ -254,17 +275,11 @@ export default function ContactSection() {
                     <option style={{ background: '#1a0d3f' }} value="debt">
                       รวมลดปลดหนี้
                     </option>
-                    <option style={{ background: '#1a0d3f' }} value="loan">
-                      สินเชื่อส่วนบุคคล
+                    <option style={{ background: '#1a0d3f' }} value="analysis">
+                      วิเคราะห์ภาระหนี้
                     </option>
                     <option style={{ background: '#1a0d3f' }} value="consult">
                       ปรึกษาปัญหาหนี้
-                    </option>
-                    <option style={{ background: '#1a0d3f' }} value="negotiate">
-                      เจรจาต่อรอง
-                    </option>
-                    <option style={{ background: '#1a0d3f' }} value="plan">
-                      วางแผนการเงิน
                     </option>
                   </Select>
                 </FormControl>

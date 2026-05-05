@@ -13,11 +13,8 @@ import {
 import { motion } from 'framer-motion';
 import {
   FaHandHoldingUsd,
-  FaFileContract,
+  FaSearchDollar,
   FaBalanceScale,
-  FaShieldAlt,
-  FaChartLine,
-  FaUsers,
 } from 'react-icons/fa';
 
 const MotionBox = motion(Box);
@@ -28,48 +25,36 @@ const services = [
     title: 'รวมลดปลดหนี้',
     description:
       'บริการรวมหนี้สินทุกประเภท ลดดอกเบี้ย ลดยอดผ่อนชำระ ปลดหนี้ได้เร็วขึ้น ช่วยให้คุณหายใจได้อย่างสบาย',
-    color: 'accent.500',
+    color: '#F5922A',
+    iconBg: '#FFF3E0',
   },
   {
-    icon: FaFileContract,
-    title: 'สินเชื่อส่วนบุคคล',
+    icon: FaSearchDollar,
+    title: 'วิเคราะห์ภาระหนี้',
     description:
-      'บริการสินเชื่อส่วนบุคคล อนุมัติไว ดอกเบี้ยต่ำ ผ่อนสบาย ไม่ต้องมีหลักทรัพย์ค้ำประกัน',
+      'ตรวจสอบยอดหนี้ ดอกเบี้ย และเงื่อนไขการชำระ เพื่อหาแนวทางลดภาระที่เหมาะกับคุณ',
     color: '#7C5CFC',
+    iconBg: '#F1EEFF',
   },
   {
     icon: FaBalanceScale,
     title: 'ปรึกษาปัญหาหนี้',
     description:
-      'ให้คำปรึกษาปัญหาหนี้สินทุกกรณี โดยทีมผู้เชี่ยวชาญ วิเคราะห์สถานการณ์ วางแผนชำระหนี้อย่างเป็นระบบ',
+      'ให้คำปรึกษาปัญหาหนี้สินทุกประเภท โดยทีมผู้เชี่ยวชาญ วิเคราะห์สถานการณ์ วางแผนชำระหนี้อย่างเป็นระบบ',
     color: '#00C9A7',
-  },
-  {
-    icon: FaShieldAlt,
-    title: 'แก้ไขหนี้ถูกกฎหมาย',
-    description:
-      'ดำเนินการแก้ไขปัญหาหนี้สินอย่างถูกต้องตามกฎหมาย ปกป้องสิทธิ์ของลูกหนี้ ไม่ต้องกลัวถูกทวงหนี้',
-    color: '#FF6B6B',
-  },
-  {
-    icon: FaChartLine,
-    title: 'วางแผนการเงิน',
-    description:
-      'ช่วยวางแผนการเงินอย่างเป็นระบบ จัดการรายรับรายจ่าย สร้างวินัยทางการเงินเพื่ออนาคตที่ดี',
-    color: '#4ECDC4',
-  },
-  {
-    icon: FaUsers,
-    title: 'เจรจาต่อรอง',
-    description:
-      'เป็นตัวแทนเจรจาต่อรองกับเจ้าหนี้ ลดยอดหนี้ ลดดอกเบี้ย ขยายระยะเวลาผ่อนชำระ ช่วยลดภาระของท่าน',
-    color: '#FFA62B',
+    iconBg: '#E6FAF6',
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <Box id="services" as="section" py={{ base: 16, md: 24 }} bg="gray.50" position="relative">
+    <Box
+      id="services"
+      as="section"
+      py={{ base: 16, md: 24 }}
+      bg="gray.50"
+      position="relative"
+    >
       {/* Decorative top gradient */}
       <Box
         position="absolute"
@@ -120,7 +105,11 @@ export default function ServicesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Text color="gray.500" fontSize={{ base: 'md', md: 'lg' }} maxW="600px">
+            <Text
+              color="gray.500"
+              fontSize={{ base: 'md', md: 'lg' }}
+              maxW="600px"
+            >
               COURTS พร้อมให้บริการรวมลดปลดหนี้ครบวงจร ดูแลคุณตั้งแต่ต้นจนจบ
             </Text>
           </MotionBox>
@@ -153,6 +142,7 @@ export default function ServicesSection() {
                 position="relative"
                 overflow="hidden"
                 h="100%"
+                role="group"
               >
                 {/* Top accent line */}
                 <Box
@@ -169,17 +159,28 @@ export default function ServicesSection() {
 
                 <VStack align="start" spacing={5}>
                   <Flex
-                    w="60px"
-                    h="60px"
-                    borderRadius="xl"
-                    bg={`${service.color}15`}
+                    w="64px"
+                    h="64px"
+                    borderRadius="2xl"
+                    bg={service.iconBg}
                     align="center"
                     justify="center"
+                    boxShadow={`0 12px 28px ${service.color}20`}
+                    transition="all 0.3s ease"
+                    _groupHover={{
+                      transform: 'translateY(-2px)',
+                      boxShadow: `0 16px 34px ${service.color}30`,
+                    }}
                   >
-                    <Icon as={service.icon} w={7} h={7} color={service.color} />
+                    <Icon as={service.icon} w={8} h={8} color={service.color} />
                   </Flex>
 
-                  <Heading as="h3" fontSize="xl" fontWeight="700" color="navy.600">
+                  <Heading
+                    as="h3"
+                    fontSize="xl"
+                    fontWeight="700"
+                    color="navy.600"
+                  >
                     {service.title}
                   </Heading>
 

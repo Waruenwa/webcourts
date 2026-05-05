@@ -25,14 +25,12 @@ import {
 const footerLinks = {
   บริการ: [
     { label: 'รวมลดปลดหนี้', href: '#services' },
-    { label: 'สินเชื่อส่วนบุคคล', href: '#services' },
+    { label: 'วิเคราะห์ภาระหนี้', href: '#services' },
     { label: 'ปรึกษาปัญหาหนี้', href: '#services' },
-    { label: 'วางแผนการเงิน', href: '#services' },
   ],
   เกี่ยวกับ: [
     { label: 'เกี่ยวกับบริษัท', href: '#about' },
-    { label: 'ทำไมต้องเรา', href: '#why-us' },
-    { label: 'ขั้นตอนการดำเนินงาน', href: '#services' },
+    { label: 'เอกสารประชุม', href: '#meeting-documents' },
     { label: 'การคุ้มครองข้อมูลส่วนบุคคล', href: '#privacy' },
     { label: 'ติดต่อเรา', href: '#contact' },
   ],
@@ -115,7 +113,6 @@ export default function Footer() {
             />
             <Text color="whiteAlpha.600" fontSize="sm" lineHeight="1.8">
               บริษัท คอร์ทส์ เม็กก้าสโตร์ (ประเทศไทย) จำกัด
-              ประกอบธุรกิจให้สินเชื่อตามประมวลกฎหมายแพ่งและพาณิชย์
             </Text>
 
             {/* Social Icons */}

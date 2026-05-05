@@ -6,7 +6,6 @@ import {
   HStack,
   IconButton,
   useDisclosure,
-  Stack,
   Container,
   Image,
   Link,
@@ -24,7 +23,7 @@ const NAV_ITEMS = [
   { label: 'หน้าแรก', href: '#home' },
   { label: 'บริการของเรา', href: '#services' },
   { label: 'เกี่ยวกับเรา', href: '#about' },
-  { label: 'ทำไมต้องเรา', href: '#why-us' },
+  { label: 'เอกสารประชุม', href: '#meeting-documents' },
   { label: 'การคุ้มครองข้อมูลส่วนบุคคล', href: '#privacy' },
   { label: 'ติดต่อเรา', href: '#contact' },
 ];

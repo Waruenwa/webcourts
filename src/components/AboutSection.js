@@ -7,7 +7,6 @@ import {
   Text,
   Flex,
   VStack,
-  HStack,
   Icon,
   Image,
   List,
@@ -22,15 +21,18 @@ const MotionBox = motion(Box);
 const features = [
   'ให้บริการรวมหนี้ ลดหนี้ ปลดหนี้ ครบวงจร',
   'ทีมผู้เชี่ยวชาญด้านกฎหมายและการเงิน',
-  'ดำเนินการอย่างถูกต้องตามกฎหมาย',
   'ปรึกษาฟรี ไม่มีค่าใช้จ่ายเบื้องต้น',
-  'ผลงานเป็นที่ประจักษ์ ลูกค้าไว้วางใจมากกว่า 10,000 ราย',
-  'รักษาความลับลูกค้าอย่างเคร่งครัด',
 ];
 
 export default function AboutSection() {
   return (
-    <Box id="about" as="section" py={{ base: 16, md: 24 }} bg="white" position="relative">
+    <Box
+      id="about"
+      as="section"
+      py={{ base: 16, md: 24 }}
+      bg="white"
+      position="relative"
+    >
       <Container maxW="1200px">
         <Flex
           direction={{ base: 'column', lg: 'row' }}
@@ -76,7 +78,12 @@ export default function AboutSection() {
                   opacity={0.08}
                 />
 
-                <VStack spacing={6} align="center" position="relative" zIndex={2}>
+                <VStack
+                  spacing={6}
+                  align="center"
+                  position="relative"
+                  zIndex={2}
+                >
                   <Image
                     src="/cou-white.png"
                     alt="COURTS Logo"
@@ -99,45 +106,9 @@ export default function AboutSection() {
                   <Box w="60px" h="2px" bg="accent.500" />
 
                   <Text color="accent.400" fontWeight="600" fontSize="sm">
-                    คอร์ทส์ เม็กก้าสโตร์ (ประเทศไทย)
+                    บริษัท คอร์ทส์ เม็กก้าสโตร์ (ประเทศไทย) จำกัด
                   </Text>
                 </VStack>
-              </Box>
-
-              {/* Floating stats card */}
-              <Box
-                position={{ base: 'relative', md: 'absolute' }}
-                bottom={{ md: '-30px' }}
-                right={{ md: '-30px' }}
-                bg="white"
-                borderRadius="2xl"
-                p={6}
-                boxShadow="0 10px 40px rgba(0,0,0,0.1)"
-                border="1px solid"
-                borderColor="gray.100"
-                mt={{ base: 4, md: 0 }}
-              >
-                <HStack spacing={4}>
-                  <Box
-                    w="50px"
-                    h="50px"
-                    borderRadius="xl"
-                    bg="green.50"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                  >
-                    <Text fontSize="2xl">🏆</Text>
-                  </Box>
-                  <VStack align="start" spacing={0}>
-                    <Text fontWeight="800" fontSize="xl" color="navy.600">
-                      10+ ปี
-                    </Text>
-                    <Text color="gray.500" fontSize="xs">
-                      ประสบการณ์ในวงการ
-                    </Text>
-                  </VStack>
-                </HStack>
               </Box>
             </Box>
           </MotionBox>
@@ -174,9 +145,13 @@ export default function AboutSection() {
                 </Text>
               </Heading>
 
-              <Text color="gray.600" fontSize={{ base: 'md', md: 'lg' }} lineHeight="1.9">
-                บริษัท คอร์ทส์ เม็กก้าสโตร์ (ประเทศไทย) จำกัด (Courts Megastore (Thailand))
-                ประกอบธุรกิจให้สินเชื่อตามประมวลกฎหมายแพ่งและพาณิชย์
+              <Text
+                color="gray.600"
+                fontSize={{ base: 'md', md: 'lg' }}
+                lineHeight="1.9"
+              >
+                บริษัท คอร์ทส์ เม็กก้าสโตร์ (ประเทศไทย) จำกัด (Courts Megastore
+                (Thailand) Co., Ltd.)
                 ดำเนินงานโดยทีมผู้เชี่ยวชาญที่มีประสบการณ์มากกว่า 10 ปี
                 ภายใต้การกำกับดูแลอย่างถูกกฎหมาย
               </Text>
@@ -184,7 +159,11 @@ export default function AboutSection() {
               <List spacing={3} w="100%">
                 {features.map((feature, i) => (
                   <ListItem key={i} display="flex" alignItems="center">
-                    <ListIcon as={FaCheckCircle} color="accent.500" fontSize="md" />
+                    <ListIcon
+                      as={FaCheckCircle}
+                      color="accent.500"
+                      fontSize="md"
+                    />
                     <Text color="gray.600" fontSize="sm">
                       {feature}
                     </Text>
