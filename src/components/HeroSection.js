@@ -53,7 +53,12 @@ export default function HeroSection() {
         zIndex={1}
       />
 
-      <Container maxW="1200px" position="relative" zIndex={2} pt={{ base: 24, md: 0 }}>
+      <Container
+        maxW="1200px"
+        position="relative"
+        zIndex={2}
+        pt={{ base: 24, md: 0 }}
+      >
         <VStack spacing={8} textAlign="center" maxW="850px" mx="auto">
           {/* Badge */}
           {/* <MotionBox
@@ -167,7 +172,7 @@ export default function HeroSection() {
           </MotionFlex>
 
           {/* Stats bar */}
-          <MotionFlex
+          {/* <MotionFlex
             mt={12}
             gap={{ base: 6, md: 12 }}
             flexDir={{ base: 'column', md: 'row' }}
@@ -193,7 +198,7 @@ export default function HeroSection() {
                 </Text>
               </VStack>
             ))}
-          </MotionFlex>
+          </MotionFlex> */}
         </VStack>
       </Container>
 

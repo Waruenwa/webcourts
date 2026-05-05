@@ -10,6 +10,7 @@ import PrivacySection from '@/components/PrivacySection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <PrivacySection />
       <ContactSection />
       <Footer />
+      <ScrollToTopButton />
       <CookieConsent />
     </Box>
   );
