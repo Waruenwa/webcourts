@@ -23,7 +23,7 @@ const NAV_ITEMS = [
   { label: 'หน้าแรก', href: '#home' },
   { label: 'บริการของเรา', href: '#services' },
   { label: 'เกี่ยวกับเรา', href: '#about' },
-  { label: 'เอกสารประชุม', href: '#meeting-documents' },
+  { label: 'เอกสารการประชุม', href: '#meeting-documents' },
   { label: 'การคุ้มครองข้อมูลส่วนบุคคล', href: '#privacy' },
   { label: 'ติดต่อเรา', href: '#contact' },
 ];
@@ -142,7 +142,7 @@ export default function Navbar() {
         <DrawerOverlay bg="blackAlpha.700" backdropFilter="blur(10px)" />
         <DrawerContent bg="#2D1155" pt={2}>
           <DrawerCloseButton color="white" size="lg" top={4} right={4} />
-          
+
           <Box px={6} pt={4} pb={6}>
             <Image
               src="/cou-white.png"

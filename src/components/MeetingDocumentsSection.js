@@ -67,7 +67,7 @@ export default function MeetingDocumentsSection() {
               color="navy.700"
               textAlign="center"
             >
-              เอกสารประชุม
+              เอกสารการประชุม
             </Heading>
             <Box w="60px" h="3px" bg="#FFA726" />
           </VStack>
@@ -107,7 +107,13 @@ export default function MeetingDocumentsSection() {
                         {doc.title}
                       </Text>
                     </LinkOverlay>
-                    <Icon as={FaFilePdf} color="#E53935" w={6} h={6} flexShrink={0} />
+                    <Icon
+                      as={FaFilePdf}
+                      color="#E53935"
+                      w={6}
+                      h={6}
+                      flexShrink={0}
+                    />
                   </Flex>
                 </LinkBox>
               </MotionBox>

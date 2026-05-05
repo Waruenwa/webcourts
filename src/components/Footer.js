@@ -30,7 +30,7 @@ const footerLinks = {
   ],
   เกี่ยวกับ: [
     { label: 'เกี่ยวกับบริษัท', href: '#about' },
-    { label: 'เอกสารประชุม', href: '#meeting-documents' },
+    { label: 'เอกสารการประชุม', href: '#meeting-documents' },
     { label: 'การคุ้มครองข้อมูลส่วนบุคคล', href: '#privacy' },
     { label: 'ติดต่อเรา', href: '#contact' },
   ],
@@ -71,7 +71,11 @@ export default function Footer() {
             textAlign={{ base: 'center', md: 'left' }}
           >
             <VStack align={{ base: 'center', md: 'start' }} spacing={2}>
-              <Text fontSize={{ base: 'xl', md: '2xl' }} fontWeight="800" color="white">
+              <Text
+                fontSize={{ base: 'xl', md: '2xl' }}
+                fontWeight="800"
+                color="white"
+              >
                 พร้อมปลดหนี้แล้วหรือยัง?
               </Text>
               <Text color="whiteAlpha.800" fontSize="md">
@@ -106,11 +110,7 @@ export default function Footer() {
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
           {/* Brand */}
           <VStack align={{ base: 'center', md: 'start' }} spacing={5}>
-            <Image
-              src="/cou-white.png"
-              alt="COURTS Logo"
-              h="30px"
-            />
+            <Image src="/cou-white.png" alt="COURTS Logo" h="30px" />
             <Text color="whiteAlpha.600" fontSize="sm" lineHeight="1.8">
               บริษัท คอร์ทส์ เม็กก้าสโตร์ (ประเทศไทย) จำกัด
             </Text>
