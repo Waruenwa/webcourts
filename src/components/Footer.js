@@ -29,6 +29,7 @@ const footerLinks = {
     { label: 'ปรึกษาปัญหาหนี้', href: '#services' },
   ],
   เกี่ยวกับ: [
+    // { label: 'บริการของเรา', href: '#services' },
     { label: 'เกี่ยวกับบริษัท', href: '#about' },
     { label: 'เอกสารการประชุม', href: '#meeting-documents' },
     { label: 'การคุ้มครองข้อมูลส่วนบุคคล', href: '#privacy' },
@@ -36,11 +37,11 @@ const footerLinks = {
   ],
 };
 
-const socialLinks = [
-  { icon: FaFacebookF, href: '#', color: '#1877F2', label: 'Facebook' },
-  { icon: FaLine, href: '#', color: '#06C755', label: 'LINE' },
-  { icon: FaInstagram, href: '#', color: '#E4405F', label: 'Instagram' },
-];
+// const socialLinks = [
+//   { icon: FaFacebookF, href: '#', color: '#1877F2', label: 'Facebook' },
+//   { icon: FaLine, href: '#', color: '#06C755', label: 'LINE' },
+//   { icon: FaInstagram, href: '#', color: '#E4405F', label: 'Instagram' },
+// ];
 
 export default function Footer() {
   return (
@@ -116,7 +117,7 @@ export default function Footer() {
             </Text>
 
             {/* Social Icons */}
-            <HStack spacing={3}>
+            {/* <HStack spacing={3}>
               {socialLinks.map((social, i) => (
                 <Link
                   key={i}
@@ -138,7 +139,7 @@ export default function Footer() {
                   <Icon as={social.icon} w={4} h={4} />
                 </Link>
               ))}
-            </HStack>
+            </HStack> */}
           </VStack>
 
           {/* Links */}
@@ -201,7 +202,7 @@ export default function Footer() {
         <Divider borderColor="whiteAlpha.100" my={8} />
 
         {/* Bottom */}
-        <Flex
+        {/* <Flex
           direction={{ base: 'column', md: 'row' }}
           align="center"
           justify="space-between"
@@ -228,7 +229,7 @@ export default function Footer() {
               เงื่อนไขการใช้บริการ
             </Link>
           </HStack>
-        </Flex>
+        </Flex> */}
       </Container>
     </Box>
   );

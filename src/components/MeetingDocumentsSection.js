@@ -17,11 +17,11 @@ import { FaFilePdf } from 'react-icons/fa';
 const MotionBox = motion(Box);
 
 const meetingDocuments = [
-  { title: 'หนังสือเชิญประชุมผู้ถือหุ้น', href: '#' },
-  { title: 'เอกสารประกอบการประชุม', href: '#' },
-  { title: 'รายงานการประชุมผู้ถือหุ้น', href: '#' },
-  { title: 'แบบฟอร์มมอบฉันทะ', href: '#' },
-  { title: 'หลักเกณฑ์การเข้าร่วมประชุม', href: '#' },
+  {
+    title:
+      'หนังสือเชิญประชุมสามัญผู้ถือหุ้นประจำปี 2569 (เผยแพร่ เมื่อวันที่ 22 เมษายน 2569)',
+    href: '/COURTS - Notice_AGM 2569.pdf',
+  },
 ];
 
 export default function MeetingDocumentsSection() {
