@@ -17,11 +17,26 @@ import { FaFilePdf } from 'react-icons/fa';
 const MotionBox = motion(Box);
 
 const privacyDocuments = [
-  { title: 'นโยบายคุ้มครองข้อมูลส่วนบุคคล', href: '#' },
-  { title: 'ประกาศเกี่ยวกับการใช้คุกกี้', href: '#' },
-  { title: 'ประกาศความเป็นส่วนตัวสำหรับลูกหนี้', href: '#' },
-  { title: 'ประกาศความเป็นส่วนตัวสำหรับผู้โอนสินทรัพย์ด้อยคุณภาพ', href: '#' },
-  { title: 'ประกาศความเป็นส่วนตัวสำหรับผู้เข้ามาภายในพื้นที่ของกลุ่มบริษัทฯ', href: '#' },
+  {
+    title: 'นโยบายคุ้มครองข้อมูลส่วนบุคคล',
+    href: '/20250305-chase-privacy-policy-th.pdf',
+  },
+  {
+    title: 'ประกาศเกี่ยวกับการใช้คุกกี้',
+    href: '20250627-chase-notice-cookies-th.pdf',
+  },
+  {
+    title: 'ประกาศความเป็นส่วนตัวสำหรับลูกหนี้',
+    href: 'chase-privacy-notice-for-debtors-th.pdf',
+  },
+  {
+    title: 'ประกาศความเป็นส่วนตัวสำหรับผู้โอนสินทรัพย์ด้อยคุณภาพ',
+    href: '20250627-chase-privacy-notice-for-non-performing-th.pdf',
+  },
+  {
+    title: 'ประกาศความเป็นส่วนตัวสำหรับผู้เข้ามาภายในพื้นที่ของกลุ่มบริษัทฯ',
+    href: '20250211-chase-privacy-notice-company-th.pdf',
+  },
 ];
 
 export default function PrivacySection() {
@@ -96,7 +111,7 @@ export default function PrivacySection() {
                   _hover={{
                     boxShadow: 'md',
                     transform: 'translateY(-2px)',
-                    borderColor: 'blue.100'
+                    borderColor: 'blue.100',
                   }}
                   transition="all 0.3s ease"
                 >
