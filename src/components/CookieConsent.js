@@ -50,12 +50,17 @@ export default function CookieConsent() {
           direction={{ base: 'column', md: 'row' }}
           gap={4}
         >
-          <Text color="whiteAlpha.900" fontSize={{ base: 'sm', md: 'md' }} lineHeight="1.8">
+          <Text
+            color="whiteAlpha.900"
+            fontSize={{ base: 'sm', md: 'md' }}
+            lineHeight="1.8"
+          >
             เว็บไซต์นี้มีการจัดเก็บคุกกี้เพื่อเพิ่มประสิทธิภาพในการใช้งานของท่าน
             และการมอบบริการที่ดีที่สุดจากเรา กรุณากดยอมรับเพื่อใช้งานต่อ
             สามารถอ่านรายละเอียดเพิ่มเติมได้ที่{' '}
             <Link
-              href="#privacy"
+              href="/20250627-chase-notice-cookies-th.pdf"
+              target="_blank"
               color="accent.400"
               fontWeight="700"
               textDecoration="underline"
